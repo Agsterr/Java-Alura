@@ -7,8 +7,13 @@ public class Animal {
 
     private boolean eMamifero;
 
+
+
+
+    private String somEmitido;
+
     public void emitirSom(){
-        System.out.printf("hahahahahah");
+        System.out.printf("\nSom emitido: " );
 
     }
     public void informacaoDoAnimal(Animal animal){
@@ -23,17 +28,7 @@ public class Animal {
         this.nome = nome;
     }
 
-    public String getTipoDeAnimal() {
-        return tipoDeAnimal;
-    }
 
-    public void setTipoDeAnimal(String tipoDeAnimal) {
-        this.tipoDeAnimal = tipoDeAnimal;
-    }
-
-    public boolean iseMamifero() {
-        return eMamifero;
-    }
 
     public void seteMamifero(boolean eMamifero) {
         this.eMamifero = eMamifero;
