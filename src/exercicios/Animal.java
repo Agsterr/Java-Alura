@@ -17,7 +17,8 @@ public class Animal {
 
     }
     public void informacaoDoAnimal(Animal animal){
-        System.out.printf("\nÉ memiro: "+eMamifero +"\nNome do animal: " +nome);
+        System.out.printf("\nÉ memiro: "+eMamifero +
+                "\nNome do animal: " +nome);
     }
 
     public String getNome() {
