@@ -1,4 +1,7 @@
-package exercicios;
+package exercicios.animal;
+
+import exercicios.animal.Cachorro;
+import exercicios.animal.Gato;
 
 public class Principal {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.carros;
 
 public class Carro {
 

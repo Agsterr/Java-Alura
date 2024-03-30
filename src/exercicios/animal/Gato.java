@@ -1,4 +1,6 @@
-package exercicios;
+package exercicios.animal;
+
+import exercicios.animal.Animal;
 
 public class Gato extends Animal {
 
@@ -16,7 +18,7 @@ public class Gato extends Animal {
         System.out.printf("\nSom emitido: ");
         System.out.printf("Miado");
     }
-   public void arranharMoveis(){
+    public void arranharMoveis(){
         if (acaoGato == true){
             System.out.printf("\nO gato esta arranhando os moveis !!!");
         }else {
@@ -24,7 +26,7 @@ public class Gato extends Animal {
 
         }
 
-   }
+    }
     public void arranhar(){
         acaoGato = true;
     }

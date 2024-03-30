@@ -1,13 +1,15 @@
-package exercicios;
+package exercicios.contasBancarias;
 
 public class ContaBancaria {
    private String nome;
-   private double saldo;
+   protected double saldo;
 
 
-
+public double depositar(double deposito){
+    return saldo += deposito;
+}
     public double sacarDaConta(double saque){
-        return this.saldo - saque;
+        return this.saldo -= saque;
     }
 
     public void setNome(String nome) {

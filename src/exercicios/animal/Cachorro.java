@@ -1,4 +1,6 @@
-package exercicios;
+package exercicios.animal;
+
+import exercicios.animal.Animal;
 
 public class Cachorro extends Animal {
     private boolean acaoCachorro = false;
