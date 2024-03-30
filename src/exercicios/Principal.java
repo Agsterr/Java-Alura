@@ -20,7 +20,8 @@ System.out.printf("\n---------------------------------------------------");
         gato.setNome("gato");
         gato.seteMamifero(true);
         gato.informacaoDoAnimal(gato);
+        gato.pararDeArranhar();
         gato.emitirSom();
-
+        gato.arranharMoveis();
     }
 }
