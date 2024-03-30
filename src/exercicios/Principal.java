@@ -7,11 +7,11 @@ public class Principal {
         Cachorro cachorro = new Cachorro();
         cachorro.setNome("cachorro");
         cachorro.seteMamifero(true);
-        cachorro.pararDePerseguirOrabo();
         cachorro.informacaoDoAnimal(cachorro);
-        cachorro.estaPerseguindoOrabo();
         cachorro.emitirSom();
         cachorro.pararDePerseguirOrabo();
+        cachorro.perseguirRabo();
+        cachorro.estaPerseguindoOrabo();
 
 
 
