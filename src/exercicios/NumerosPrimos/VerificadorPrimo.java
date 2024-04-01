@@ -1,10 +1,12 @@
 package exercicios.NumerosPrimos;
 
-public class VerificadorPrimo {
+public class VerificadorPrimo extends NumeroPrimo {
 
-    public void verificarSeEhPrimo(){
-
+    public boolean verificarSeEhPrimo(int numero) {
+        return verificarPrimalidade(numero);
     }
-
-
 }
+
+
+
+

@@ -1,9 +1,9 @@
 package exercicios.NumerosPrimos;
 
-public class GeradorPrimo {
+public class GeradorPrimo extends NumeroPrimo {
 
-
-    public void gerarProximoPrimo(){
-
+    public int gerarProximoPrimo(int numeroAtual) {
+        return encontrarProximoPrimo(numeroAtual);
     }
+
 }
