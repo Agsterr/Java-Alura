@@ -1,8 +1,7 @@
 package br.com.alura.screenmatch.modelos;
 
 import br.com.alura.screenmatch.modelos.Calculadora.Calculos;
-import br.com.alura.screenmatch.modelos.Filme;
-import br.com.alura.screenmatch.modelos.Series;
+import br.com.alura.screenmatch.modelos.Calculadora.FiltroDeRecomendacao;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -27,7 +26,7 @@ public class Principal {
         meuFilme.avalia(5);
         meuFilme.avalia(5);
         meuFilme.informacoes();
-        System.out.println("aquiii: " + meuFilme.retorneMedia());
+        System.out.println("aquiii: " + meuFilme.pegaMedia());
 
         Series lost = new Series();
 
@@ -55,6 +54,14 @@ public class Principal {
 
         System.out.println("Total em minutos: " + calc.getTempoTotal());
 
+        FiltroDeRecomendacao filtroDeRecomendacao = new FiltroDeRecomendacao();
+        filtroDeRecomendacao.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setSeries(lost);
+        episodio.setNumero(1);
+        episodio.setTotalDeAvaliacoes(300);
+        filtroDeRecomendacao.filtra(episodio);
 
     }
 }

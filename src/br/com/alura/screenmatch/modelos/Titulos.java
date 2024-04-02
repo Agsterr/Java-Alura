@@ -37,7 +37,7 @@ public class Titulos {
         System.out.println("Duração do filme: " + duracaoEmMinutos);
         System.out.println("Avaliação do filme: " + somaDasAvaliacoes);
         System.out.println("Total De Avaliações: " + totalDeAvaliacoes);
-        System.out.println("Media De Avaliação: " + retorneMedia());
+        System.out.println("Media De Avaliação: " + pegaMedia());
         System.out.println("Esta incluido no plano?: " + incluidoNoPlano);
     }
 
@@ -50,7 +50,7 @@ public class Titulos {
         totalDeAvaliacoes ++;
     }
 
-    public double retorneMedia(){
+    public double pegaMedia(){
         mediaDasAvaliacoes = 0;
         mediaDasAvaliacoes = somaDasAvaliacoes / totalDeAvaliacoes;
         return mediaDasAvaliacoes;
