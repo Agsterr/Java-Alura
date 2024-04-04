@@ -1,9 +1,9 @@
 package br.com.alura.screenmatch.modelos.Calculadora;
 
 public class FiltroDeRecomendacao {
-    private String recmmendacao;
+    private String recomendacao;
 
-    public void filtra(Classificavel classificavel){
+    public void filtro(Classificavel classificavel){
         if (classificavel.getClassificacao() >= 4){
             System.out.printf("Está entre os preferidos do momento");
 

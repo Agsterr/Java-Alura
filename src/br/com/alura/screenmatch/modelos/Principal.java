@@ -55,13 +55,13 @@ public class Principal {
         System.out.println("Total em minutos: " + calc.getTempoTotal());
 
         FiltroDeRecomendacao filtroDeRecomendacao = new FiltroDeRecomendacao();
-        filtroDeRecomendacao.filtra(meuFilme);
+        filtroDeRecomendacao.filtro(meuFilme);
 
         Episodio episodio = new Episodio();
         episodio.setSeries(lost);
         episodio.setNumero(1);
         episodio.setTotalDeAvaliacoes(300);
-        filtroDeRecomendacao.filtra(episodio);
+        filtroDeRecomendacao.filtro(episodio);
 
     }
 }
