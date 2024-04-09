@@ -3,6 +3,8 @@ package br.com.alura.screenmatch.modelos;
 import br.com.alura.screenmatch.modelos.Calculadora.Calculos;
 import br.com.alura.screenmatch.modelos.Calculadora.FiltroDeRecomendacao;
 
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Principal {
@@ -14,12 +16,12 @@ public class Principal {
         meuFilme.setDuracaoEmMinutos(180);
         meuFilme.setIncluidoNoPlano(false);
 
-        Filme Filme = new Filme();
+        Filme filme = new Filme();
 
-        Filme.setNome("o poderoso chefão ");
-        Filme.setAnoLancamento(1970);
-        Filme.setDuracaoEmMinutos(180);
-        Filme.setIncluidoNoPlano(false);
+        filme.setNome("o poderoso chefão ");
+        filme.setAnoLancamento(1970);
+        filme.setDuracaoEmMinutos(180);
+        filme.setIncluidoNoPlano(false);
 
         meuFilme.avalia(7);
         meuFilme.avalia(10);
@@ -62,6 +64,21 @@ public class Principal {
         episodio.setNumero(1);
         episodio.setTotalDeAvaliacoes(300);
         filtroDeRecomendacao.filtro(episodio);
+
+        var filmeDoPaulo = new Filme();
+        filmeDoPaulo.setNome("dogville");
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.setAnoLancamento(2003);
+        filmeDoPaulo.avalia(10);
+        ArrayList <Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoPaulo);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(filme);
+        System.out.println("Tamanho Da Minha Lista: " + listaDeFilmes.size());
+        System.out.println("primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+
+
 
     }
 }
