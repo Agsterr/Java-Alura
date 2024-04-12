@@ -1,11 +1,13 @@
 package exercicios.exerProduto;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class PrincipalProduto {
     public static void main(String[] args) {
         Scanner digite = new Scanner(System.in);
+        digite.useLocale(Locale.US);
         ArrayList<Produto> produtos = new ArrayList<>();
 
         System.out.println("Digite a quantidade de produtos: ");
@@ -13,7 +15,7 @@ public class PrincipalProduto {
         digite.nextLine(); // Limpar o buffer do scanner
 
         for (int i = 0; i < quantidadeProdutos; i++) {
-            Produto produto = new Produto();
+            Produto produto = new Produto("sal",7.1,1 );
             System.out.println("Digite o nome do produto " + (i + 1) + ": ");
             produto.setNome(digite.nextLine());
             System.out.println("Digite o preço do produto " + (i + 1) + ": ");
@@ -25,6 +27,10 @@ public class PrincipalProduto {
             digite.nextLine(); // Limpar o buffer do scanner após o nextInt()
             produtos.add(produto);
         }
+        ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel("goiaba",7.8,2);
+        System.out.println();
+        System.out.println("Produtos pereciveis: " + produtoPerecivel);
+        System.out.println();
 
         System.out.println("Quantidade de produtos na lista: " + produtos.size());
         System.out.println("Primeiro produto da lista: " + produtos.get(0));
