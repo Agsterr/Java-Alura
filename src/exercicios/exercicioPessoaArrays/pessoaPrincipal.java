@@ -30,7 +30,7 @@ public class pessoaPrincipal {
             System.out.println("nome: " + ps.getNome() + " idade: " + ps.getIdade());
         }
         System.out.println("Tamanho Da Lista: " + listaDePessoas.size());
-        System.out.println("Primeira pessoa da lista: "+ listaDePessoas.get(0));
+        System.out.println("Primeira pessoa da listA: "+ listaDePessoas.get(0));
 
         digite.close();
 
