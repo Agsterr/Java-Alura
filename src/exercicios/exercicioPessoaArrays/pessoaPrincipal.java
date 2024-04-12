@@ -27,7 +27,7 @@ public class pessoaPrincipal {
 
         System.out.println("lista de pessoas: ");
         for (Pessoa ps : listaDePessoas){
-            System.out.println("nome: " + ps.getNome() + " idade: " + ps.getIdade());
+            System.out.println(ps);
         }
         System.out.println("Tamanho Da Lista: " + listaDePessoas.size());
 

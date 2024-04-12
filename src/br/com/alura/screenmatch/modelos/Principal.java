@@ -9,16 +9,16 @@ import java.util.ArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
+        Filme meuFilme = new Filme("o poderoso chefão ", 1970);
 
-        meuFilme.setNome("o poderoso chefão ");
+
         meuFilme.setAnoLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
         meuFilme.setIncluidoNoPlano(false);
 
-        Filme filme = new Filme();
+        Filme filme = new Filme("o chefão", 1970);
 
-        filme.setNome("o poderoso chefão ");
+        filme.setNome("o chefão ");
         filme.setAnoLancamento(1970);
         filme.setDuracaoEmMinutos(180);
         filme.setIncluidoNoPlano(false);
@@ -30,19 +30,17 @@ public class Principal {
         meuFilme.informacoes();
         System.out.println("aquiii: " + meuFilme.pegaMedia());
 
-        Series lost = new Series();
+        Series lost = new Series("lost",2000);
 
-        lost.setNome("lost");
-        lost.setAnoLancamento(2000);
+
         lost.setEpisodiosPorTemporadas(10);
         lost.setSerieIncluidaNoPlano(false);
         lost.setMinutosPorEpisodios(10);
         lost.setTemporadas(10);
 
-        Series grim = new Series();
+        Series grim = new Series("grim", 2000);
 
-        grim.setNome("grim");
-        grim.setAnoLancamento(2000);
+
         grim.setEpisodiosPorTemporadas(10);
         grim.setSerieIncluidaNoPlano(false);
         grim.setMinutosPorEpisodios(10);
@@ -65,7 +63,7 @@ public class Principal {
         episodio.setTotalDeAvaliacoes(300);
         filtroDeRecomendacao.filtro(episodio);
 
-        var filmeDoPaulo = new Filme();
+        var filmeDoPaulo = new Filme("dogville", 2003);
         filmeDoPaulo.setNome("dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.setAnoLancamento(2003);

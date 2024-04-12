@@ -7,6 +7,10 @@ public class Series extends Titulos {
     private boolean ativa;
     private int minutosPorEpisodios;
 
+    public Series(String nome, int anoLancamento) {
+        super(nome, anoLancamento);
+    }
+
     public boolean isSerieIncluidaNoPlano() {
         return serieIncluidaNoPlano;
     }
