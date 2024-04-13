@@ -1,7 +1,11 @@
-package br.com.alura.screenmatch.modelos;
+package br.com.alura.Principal;
 
 import br.com.alura.screenmatch.modelos.Calculadora.Calculos;
 import br.com.alura.screenmatch.modelos.Calculadora.FiltroDeRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
+import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Series;
+import br.com.alura.screenmatch.modelos.Titulos;
 
 import java.util.ArrayList;
 
@@ -68,13 +72,15 @@ public class Principal {
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.setAnoLancamento(2003);
         filmeDoPaulo.avalia(10);
-        ArrayList <Filme> listaDeFilmes = new ArrayList<>();
-        listaDeFilmes.add(filmeDoPaulo);
-        listaDeFilmes.add(meuFilme);
-        listaDeFilmes.add(filme);
-        System.out.println("Tamanho Da Minha Lista: " + listaDeFilmes.size());
-        System.out.println("primeiro filme.: " + listaDeFilmes.get(0).getNome());
-        System.out.println(listaDeFilmes);
+        ArrayList <Titulos> listaDeAssistidos = new ArrayList<>();
+        listaDeAssistidos.add(filmeDoPaulo);
+        listaDeAssistidos.add(meuFilme);
+        listaDeAssistidos.add(filme);
+        listaDeAssistidos.add(lost);
+
+        System.out.println("Tamanho Da Minha Lista: " + listaDeAssistidos.size());
+        System.out.println("primeiro filme.: " + listaDeAssistidos.get(0).getNome());
+        System.out.println(listaDeAssistidos);
 
 
 
