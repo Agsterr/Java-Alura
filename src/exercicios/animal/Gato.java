@@ -20,9 +20,9 @@ public class Gato extends Animal {
     }
     public void arranharMoveis(){
         if (acaoGato == true){
-            System.out.printf("\nO gato esta arranhando os moveis !!!");
+            System.out.printf("\nO gato esta arranhando os moveis !!!\n");
         }else {
-            System.out.printf("\nO gato não esta arranhando os moveis !!!");
+            System.out.printf("\nO gato não esta arranhando os moveis !!!\n");
 
         }
 

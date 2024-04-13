@@ -3,6 +3,9 @@ package exercicios.animal;
 import exercicios.animal.Cachorro;
 import exercicios.animal.Gato;
 
+import java.util.ArrayList;
+import java.util.concurrent.Callable;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -26,5 +29,33 @@ System.out.printf("\n---------------------------------------------------");
         gato.pararDeArranhar();
         gato.emitirSom();
         gato.arranharMoveis();
+
+
+       // exercicio:1 arrays
+        ArrayList<String> nomes = new ArrayList<>();
+        nomes.add("agster");
+        nomes.add("jessica");
+        nomes.add("aferson");
+        nomes.add("lorrayne");
+
+        for (String nome : nomes) {
+            System.out.println(nome);
+        }
+/////////////////////////////////////////////////////////////////////////
+        // exercicio2
+
+        Cachorro c1 = new Cachorro();
+       // Animal animal = (Animal) c1;
+
+        if (c1 instanceof Animal animal){
+            System.out.println("verdadeiro!!!!");
+        }
+
+        Animal an = new Animal();
+        Cachorro c = (Cachorro) an;
+///////////////////////////////////////////////////////////////////////////////////////
+
     }
+
+
 }

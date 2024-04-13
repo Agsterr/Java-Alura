@@ -25,8 +25,9 @@ public class Animal {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public Animal setNome(String nome) {
         this.nome = nome;
+        return null;
     }
 
 
