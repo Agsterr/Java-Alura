@@ -29,7 +29,9 @@ public class PrincipalConta {
         double saldoMaximo = 0;
         int numeroDaCaontaComSaldoMaior = 0;
         for (ContaBancaria SaldoConta : listaDeContas) {
+            // compara get saldo com saldo max e se for maior add o get no saldo max
             if (SaldoConta.getSaldo() > saldoMaximo){
+                // add o get saldo a saldo max
                 saldoMaximo = SaldoConta.getSaldo();
                 numeroDaCaontaComSaldoMaior = SaldoConta.numeroDaConta;
             }
