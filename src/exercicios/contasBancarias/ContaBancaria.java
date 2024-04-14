@@ -1,6 +1,7 @@
 package exercicios.contasBancarias;
 
 public class ContaBancaria {
+    int numeroDaConta;
    private String nome;
    protected double saldo;
 
@@ -16,7 +17,9 @@ public double depositar(double deposito){
         this.nome = nome;
     }
 
-
+    public double getNumeroDaConta() {
+        return numeroDaConta;
+    }
 
     public String getNome() {
         return nome;
@@ -24,5 +27,14 @@ public double depositar(double deposito){
 
     public double getSaldo() {
         return saldo;
+    }
+
+    @Override
+    public String toString() {
+        return "ContaBancaria{" +
+                "numeroDaConta=" + numeroDaConta +
+                ", nome='" + nome + '\'' +
+                ", saldo=" + saldo +
+                '}';
     }
 }
