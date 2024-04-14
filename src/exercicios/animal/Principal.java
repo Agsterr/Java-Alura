@@ -45,14 +45,16 @@ System.out.printf("\n---------------------------------------------------");
         // exercicio2
 
         Cachorro c1 = new Cachorro();
-       // Animal animal = (Animal) c1;
 
-        if (c1 instanceof Animal animal){
-            System.out.println("verdadeiro!!!!");
+
+        if (c1 instanceof Animal animal) {
+            System.out.println("c1 é uma instância de Animal");
         }
 
         Animal an = new Animal();
-        Cachorro c = (Cachorro) an;
+        if (an instanceof Cachorro ca) {
+            System.out.println("an é uma instância de Cachorro");
+        }
 ///////////////////////////////////////////////////////////////////////////////////////
 
     }

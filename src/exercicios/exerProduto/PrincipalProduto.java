@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class PrincipalProduto {
     public static void main(String[] args) {
+
         Scanner digite = new Scanner(System.in);
         digite.useLocale(Locale.US);
         ArrayList<Produto> produtos = new ArrayList<>();
@@ -35,8 +36,22 @@ public class PrincipalProduto {
         System.out.println("Quantidade de produtos na lista: " + produtos.size());
         System.out.println("Primeiro produto da lista: " + produtos.get(0));
         System.out.println("Lista de produtos: ");
+
+// exercicio 4
+        double valorTotal = 0;
+        int quantidadeTotal = 0;
         for (Produto produto : produtos) {
-            System.out.println(produto);
+
+           valorTotal += produto.getPreco() * produto.getQuantidade();
+           quantidadeTotal += produto.getQuantidade() ;
+
         }
+        double precoMedio = 0;
+        if (quantidadeTotal != 0) {
+            precoMedio = valorTotal / quantidadeTotal;
+        }
+        System.out.println("Lista de produtos: " + produtos);
+        System.out.println("valor total: " + valorTotal);
+        System.out.println("Preço medio: " + precoMedio );
     }
 }

@@ -42,4 +42,7 @@ class Produto {
     public String toString() {
         return "Nome do produto: " + nome + ", Preço: " + preco + " Reais, Quantidade: " + quantidade;
     }
+    ArrayList<Produto> produtos = new ArrayList<>();
+
+
 }
