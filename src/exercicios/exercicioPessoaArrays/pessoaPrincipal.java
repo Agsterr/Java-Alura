@@ -1,6 +1,7 @@
 package exercicios.exercicioPessoaArrays;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class pessoaPrincipal {
@@ -32,6 +33,37 @@ public class pessoaPrincipal {
         System.out.println("Tamanho Da Lista: " + listaDePessoas.size());
 
         System.out.println("Primeira pessoa da listaa: "+ listaDePessoas.get(0));
+
+        // exercicio1
+        ArrayList <Integer> integers= new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+        integers.add(3);
+        integers.add(4);
+        Collections.sort(integers);
+        System.out.println("lista crescente: " + integers);
+        System.out.println("---------------------------------------------");
+
+        Collections.reverse(integers);
+    System.out.println("lista descrescente: " + integers);
+
+    //exercicio2 , 3
+
+     Titulo titulo = new Titulo("");
+        titulo.nome = "Jessica";
+        Titulo titulo1 = new Titulo("");
+        titulo1.nome = "Agster";
+        Titulo titulo2 = new Titulo("");
+        titulo2.nome = "gui";
+        ArrayList<Titulo> nomes = new ArrayList<>();
+        nomes.add(titulo1);
+        nomes.add(titulo2);
+        nomes.add(titulo);
+        Collections.sort(nomes);
+        System.out.println(nomes);
+        for (Titulo nome : nomes) {
+            System.out.println(nome.getNome());
+        }
 
 
         digite.close();

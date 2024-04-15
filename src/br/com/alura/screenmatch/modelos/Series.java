@@ -71,4 +71,9 @@ public class Series extends Titulos {
         return temporadas * episodiosPorTemporadas * minutosPorEpisodios;
 
     }
+
+    @Override
+    public String toString() {
+        return " Nome: " + getNome() + " ano de lançamento: " + getAnoLancamento();
+    }
 }
