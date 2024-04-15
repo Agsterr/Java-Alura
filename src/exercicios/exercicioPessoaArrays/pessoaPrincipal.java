@@ -2,6 +2,7 @@ package exercicios.exercicioPessoaArrays;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class pessoaPrincipal {
@@ -55,7 +56,7 @@ public class pessoaPrincipal {
         titulo1.nome = "Agster";
         Titulo titulo2 = new Titulo("");
         titulo2.nome = "gui";
-        ArrayList<Titulo> nomes = new ArrayList<>();
+        List<Titulo> nomes = new ArrayList<>();
         nomes.add(titulo1);
         nomes.add(titulo2);
         nomes.add(titulo);
