@@ -4,8 +4,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class Titulos implements Comparable<Titulos> {
 
+    //indicar para a classe java quem é o nome no arquivo gson
     @SerializedName("Title")
     private String nome;
+
+    //indicar para a classe java quem é o ano no arquivo gson
     @SerializedName("Year")
     private int anoLancamento;
     private boolean incluidoNoPlano;
@@ -92,7 +95,7 @@ public class Titulos implements Comparable<Titulos> {
         return somaDasAvaliacoes;
     }
 
-
+// comparar
     @Override
     public int compareTo(Titulos outroTitulo) {
 

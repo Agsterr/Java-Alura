@@ -27,13 +27,18 @@ public class PrincipalComBusca {
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
 
+        // variavel json recebendo o arquivo json
         String json = response.body();
 
+        // instanciando a classe gson
         Gson gson = new GsonBuilder()
+                //evitar erro se receber arquivos com letra maiscula
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+
+        //  instanciando a classe record  e fazendo a conversão do arquivo json na classe record
         TituloOmdb tituloOmdb = gson.fromJson(json, TituloOmdb.class);
 
-
+        // instanciando classe super Titulo e passando a classe record como parametro (tituloOmdb)
         Titulos titulos = new Titulos(tituloOmdb);
         System.out.println(titulos);
     }
