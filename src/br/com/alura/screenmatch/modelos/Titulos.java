@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.modelos;
 
+import br.com.alura.screenmatch.excecao.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulos implements Comparable<Titulos> {
@@ -18,6 +19,9 @@ public class Titulos implements Comparable<Titulos> {
 
     public Titulos(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+        if (meuTituloOmdb.year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("Não consegui converter por que tem um caractere diferente:");
+        }
         this.anoLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.parseInt(meuTituloOmdb.runtime().replace(" min", ""));
     }

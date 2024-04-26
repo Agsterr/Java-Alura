@@ -18,28 +18,47 @@ public class PrincipalComBusca {
         Scanner leitura = new Scanner(System.in);
         System.out.println("Digite o nome do filme: ");
         var busca = leitura.nextLine();
+        busca = busca.replace(" ", "%20");
+
         String endereco = "http://www.omdbapi.com/?t=" + busca + "&apikey=7d01bb64";
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(endereco))
-                .build();
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
+        try {
 
 
-        // variavel json recebendo o arquivo json
-        String json = response.body();
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(endereco))
+                    .build();
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
 
-        // instanciando a classe gson
-        Gson gson = new GsonBuilder()
-                //evitar erro se receber arquivos com letra maiscula
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
 
-        //  instanciando a classe record  e fazendo a conversão do arquivo json na classe record
-        TituloOmdb tituloOmdb = gson.fromJson(json, TituloOmdb.class);
+            // variavel json recebendo o arquivo json
+            String json = response.body();
 
-        // instanciando classe super Titulo e passando a classe record como parametro (tituloOmdb)
-        Titulos titulos = new Titulos(tituloOmdb);
-        System.out.println(titulos);
+            // instanciando a classe gson
+            Gson gson = new GsonBuilder()
+                    //evitar erro se receber arquivos com letra maiscula
+                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+
+            //  instanciando a classe record  e fazendo a conversão do arquivo json na classe record
+            TituloOmdb tituloOmdb = gson.fromJson(json, TituloOmdb.class);
+            System.out.println(tituloOmdb);
+
+            // instanciando classe super Titulo e passando a classe record como parametro (tituloOmdb)
+            Titulos titulos = new Titulos(tituloOmdb);
+            System.out.println(titulos);
+        }catch (NumberFormatException   e){
+            System.out.println("Aconteceu um erro: ");
+            System.out.println(e.getMessage());
+
+        }catch ( IllegalArgumentException  e){
+            System.out.println("Aconteceu um erro: ");
+            System.out.println(e.getMessage());
+        }catch (Exception e){
+            System.out.println("aconteceu um erro não sei oque pode ser");
+        }
+        System.out.println("Finalizou corretamente!!!");
+
+
     }
 }
