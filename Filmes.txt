@@ -1,0 +1,1 @@
+nome='Dogville', anoLancamento=2003,Duração em minutos: 178
