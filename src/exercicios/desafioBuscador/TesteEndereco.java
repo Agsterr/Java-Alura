@@ -15,9 +15,7 @@ public class TesteEndereco {
         do {
             System.out.println("\nMenu:");
             System.out.println("1. Buscar CEP");
-            System.out.println("2. Gravar CEP");
-            System.out.println("3. Apagar CEP");
-            System.out.println("4. Sair");
+            System.out.println("2. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
             scanner.nextLine(); // Consumir a quebra de linha após o nextInt()
@@ -37,19 +35,14 @@ public class TesteEndereco {
                         System.out.println("Finalizando a aplicação");
                     }
                     break;
+
                 case 2:
-                    // Implemente a gravação do CEP
-                    break;
-                case 3:
-                    // Implemente a exclusão do CEP
-                    break;
-                case 4:
                     System.out.println("Saindo...");
                     break;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
-        } while (opcao != 4);
+        } while (opcao != 2);
 
         scanner.close();
     }
